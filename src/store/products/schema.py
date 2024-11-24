@@ -14,7 +14,7 @@ class Product(BaseModel):
     rating: str
     seller_uid: str
     created_at: datetime
-    update_at: datetime
+    updated_at: datetime
 
     class Config:
         orm_mode = True  # To enable compatibility with ORM models like SQLModel

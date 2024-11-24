@@ -23,9 +23,6 @@ async def create_new_user(user_data: User, session: AsyncSession = Depends(get_s
             detail=f"Database error occurred: {str(e)}"
         )
 
-
-
-
 @user_router.get("/all", response_model=List[User])
 async def get_all_users(session: AsyncSession = Depends(get_session)):
     try:

@@ -25,7 +25,7 @@ class Product(SQLModel, table=True):
     created_at: datetime = Field(
         sa_column=Column(pg.TIMESTAMP, nullable=False, default=datetime.utcnow)
     )
-    update_at: datetime = Field(
+    updated_at: datetime = Field(
         sa_column=Column(pg.TIMESTAMP, nullable=False, default=datetime.utcnow, onupdate=datetime.utcnow)
     )
 
