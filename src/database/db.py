@@ -34,6 +34,9 @@ async def init_db():
     async with engine.begin() as conn:
         from src.users.models import User
         from src.store.products.models import Product
+        from src.store.orders.models import Order
+        from src.store.inventory.models import Inventory
+        from src.store.cart.models import Cart
         await conn.run_sync(SQLModel.metadata.create_all)
 
 async def get_session() -> AsyncSession:

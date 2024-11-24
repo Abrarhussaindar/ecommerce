@@ -12,7 +12,7 @@ async def create_new_order():
 async def get_order_by_id(orderid: str):
     pass
 
-@order_router.get("/{uid}", status_code=status.HTTP_200_OK)
+@order_router.get("/user/{uid}", status_code=status.HTTP_200_OK)
 async def get_order_by_userid(uid: str):
     pass
 
